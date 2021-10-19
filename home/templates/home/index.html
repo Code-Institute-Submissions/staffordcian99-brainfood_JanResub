@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="heading-font home-message">
+                    Feeling hungry? Why not order now?
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="" class="menu-button btn">View Menu</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -1,11 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&family=Roboto:wght@300&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: url('/media/home-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.logo{
+    font-family: 'Lobster', cursive;
+}
+
 .header-color{
     color: white !important;
 }
 
-.bg-color-h{
-    background-color: darkmagenta !important;
+.heading-font{
+    font-family: 'Oswald', sans-serif;
 }
 
-.bg-color-hs{
-    background-color: darkorchid !important;
+.home-message{
+    color: #fff;
+}
+
+.menu-button{
+    background: orangered;
+    color: white;
+    min-width: 260px;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    margin: 4px 2px;
+    font-size: 24px;
+}
+
+.menu-button:hover,
+.menu-button:active,
+.menu-button:focus {
+    background: rgb(214, 194, 8);
+    color: rgb(7, 7, 7);
+}
+
+/* Media Queries */
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
 }

@@ -41,12 +41,12 @@
     {% block page_header %}
       <header class="container-fluid fixed-top">
         <div class="row">
-          <div class="col-12 col-lg-4 text-center my-auto text-lg-left py-1 px-0 bg-color-h">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
-              <h2 class="m-0 header-color  display-1">Brainfood</h2>
+          <div class="col-12 col-lg-4 text-center my-auto text-lg-left py-1 px-0">
+            <a href="{% url 'home' %}" class="nav-link">
+              <h2 class="m-0 header-color display-1 logo">Brainfood</h2>
             </a>
           </div>
-          <div class="col-12 col-lg-4 my-0 py-4 px-2 bg-color-hs">
+          <div class="col-12 col-lg-4 my-0 py-4 px-2">
             <form method="GET" action="">
               <div class="input-group w-100">
                 <input class="form-control" type="text" name="q" placeholder="Find your favourite food!">
@@ -60,10 +60,10 @@
               </div>
             </form>
           </div>
-          <div class="col-12 col-lg-4 my-0 py-4 px-2 bg-color-hs">
+          <div class="col-12 col-lg-4 my-0 py-4 px-2">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item dropdown">
-                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
                     <div><i class="fas fa-user fa-lg header-color"></i></div>
                     <p class="my-0 header-color">My Account</p>
@@ -102,8 +102,12 @@
       </header>
     {% endblock %}
 
-    {% block content %}
+    {% block extra_page_header %}
     {% endblock %}
 
+    {% block content %}
+    {% endblock %}
+  
     {% block postloadjs %}
     {% endblock %}
+  </body>
