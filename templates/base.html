@@ -35,10 +35,10 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div class="row">
+      <div id="topnav" class="row header-row pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 text-center my-auto text-lg-left py-1 px-0">
           <a href="{% url 'home' %}" class="nav-link">
-            <h2 class="m-0 header-color display-1 logo">Brainfood</h2>
+            <h2 class="m-0 header-color display-2 logo">Brainfood</h2>
           </a>
         </div>
         <div class="col-12 col-lg-4 my-0 py-4 px-2">
@@ -93,20 +93,18 @@
             </li>
           </ul>
         </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
       </div>
-      <div class="row text-white">
-        <nav class="navbar navbar-expand-lg navbar-light w-100">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            {% include 'includes/mob-header.html' %}
-            {% include 'includes/main-nav.html' %}
-        </nav>
-    </div>
-    <div id="delivery-banner" class="row text-center">
-        <div class="col text-white">
-            <h4 class="logo-font my-1">Free delivery on orders over $50!</h4>                
-        </div>            
+      <div class="row text-white header-row">
+        <div class="col" id="main-nav-col">  
+          <nav class="navbar navbar-expand-lg navbar-light w-100">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon text-white"></span>
+              </button>
+              {% include 'includes/mob-header.html' %}
+              {% include 'includes/main-nav.html' %}
+          </nav>
+        </div>
     </div>
     </header>
     {% if messages %}
