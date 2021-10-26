@@ -3,5 +3,21 @@ from .models import MenuItem, Category
 
 # Register your models here.
 
-admin.site.register(MenuItem)
-admin.site.register(Category)
+class MenuItemAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'category',
+        'price',
+        'image',
+    )
+
+    ordering = ('category',)
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+admin.site.register(MenuItem, MenuItemAdmin)
+admin.site.register(Category, CategoryAdmin)
