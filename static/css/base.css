@@ -16,14 +16,19 @@ body{
 }
 
 .header-row{
-    max-height: 82px;
+    max-height: 72px;
+    background-color: black;
 }
 
 #main-nav-col{
     text-align: center;
     padding-left: 30%;
     padding-right: 30%;
+    padding-top: 45px;
+    padding-bottom: 5px;
     font-size: x-large;
+    background-color: rgb(17, 17, 17);
+    z-index: -1;
 }
 
 .header-color{
@@ -59,7 +64,31 @@ body{
     color: rgb(7, 7, 7);
 }
 
+/* menu_item page */
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+.item-container{
+    padding: 10px;
+}
+
+.menu-card{
+    border-right: solid 5px rgb(206, 206, 206);
+    border-bottom: solid 5px rgb(206, 206, 206);
+    border-radius: 12px;
+}
+
+.menu-img{
+    height: 200px;
+}
 /* Media Queries */
 
 @media (min-width: 992px) {
