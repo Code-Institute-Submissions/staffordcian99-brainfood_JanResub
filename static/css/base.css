@@ -60,9 +60,13 @@ body{
 
 .menu-button:hover,
 .menu-button:active,
-.menu-button:focus {
-    background: rgb(214, 194, 8);
-    color: rgb(7, 7, 7);
+.menu-button:focus,
+.add-bag-btn:hover,
+.add-bag-btn:active,
+.add-bag-btn:focus {
+    background: white;
+    color: orangered;
+    border: 2px solid orangered;
 }
 
 /* menu_item page */
@@ -90,6 +94,27 @@ body{
 .menu-img{
     height: 200px;
 }
+/* item details page */
+
+.add-more-btn{
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+
+.add-more-btn:hover,
+.add-more-btn:active,
+.add-more-btn:focus {
+    background: white;
+    color: rgb(17, 17, 17);
+    border: 2px solid rgb(17, 17, 17);
+}
+
+.add-bag-btn{
+    background: orangered;
+    color: white;
+}
+
+
 
 /* Media Queries */
 
