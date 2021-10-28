@@ -24,6 +24,8 @@ body{
 #main-nav-col{
     font-size: x-large;
     background-color: rgb(17, 17, 17);
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .header-color{
@@ -88,8 +90,6 @@ body{
 .menu-img{
     height: 200px;
 }
-/* Item details page */
-
 
 /* Media Queries */
 
