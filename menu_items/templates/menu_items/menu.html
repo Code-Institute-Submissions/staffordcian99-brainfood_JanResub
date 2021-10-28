@@ -25,11 +25,11 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 menu-card">
                             {% if menu_item.image %}
-                            <a href="">
-                                <img class="card-img-top img-fluid menu-img" src="{{ menu_item.image.url }}" alt="{{ product.name }}">
+                            <a href="{% url 'item_details' menu_item.id %}">
+                                <img class="card-img-top img-fluid menu-img" src="{{ menu_item.image.url }}" alt="{{ menu_item.name }}">
                             </a>
                             {% else %}
-                            <a href="">
+                            <a href="{% url 'item_details' menu_item.id %}">
                                 <img class="card-img-top img-fluid menu-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ menu_item.name }}">
                             </a>
                             {% endif %}

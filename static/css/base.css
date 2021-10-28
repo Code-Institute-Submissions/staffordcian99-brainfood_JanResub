@@ -16,19 +16,14 @@ body{
 }
 
 .header-row{
-    max-height: 72px;
-    background-color: black;
+    max-height: 164px;
+    background-color: rgb(17, 17, 17);
+    z-index: 2;
 }
 
 #main-nav-col{
-    text-align: center;
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-top: 45px;
-    padding-bottom: 5px;
     font-size: x-large;
     background-color: rgb(17, 17, 17);
-    z-index: -1;
 }
 
 .header-color{
@@ -41,6 +36,10 @@ body{
 
 .home-message{
     color: #fff;
+}
+
+.home-container{
+    padding-top: 100px;
 }
 
 .menu-button{
@@ -98,9 +97,5 @@ body{
         right: 0;
         left: 0;
         z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 200px;
     }
 }

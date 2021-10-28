@@ -1,13 +1,12 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto ul-nav py-0">
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mr-5 text-white" href="#" id="all-items-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All items
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item ">By Rating</a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-items-link">
                 <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All items</a>
+                <a href="{% url 'all_items' %}" class="dropdown-item">All items</a>
             </div>
         </li>
 
@@ -24,25 +23,14 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Homeware
+            <a class="font-weight-bold nav-link text-white" href="#" id="meal-deal-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Meal Deals
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Bed &amp; Bath</a>
-                <a href="" class="dropdown-item">Kitchen &amp; Dining</a>
-                <a href="" class="dropdown-item">All Homeware</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-white" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+            <div class="dropdown-menu border-0" aria-labelledby="meal-deal-link">
+                <a href="" class="dropdown-item">Burgers</a>
+                <a href="" class="dropdown-item">Subs</a>
+                <a href="" class="dropdown-item">Fish</a>
+                <a href="" class="dropdown-item">All Meals</a>
             </div>
         </li>
     </ul>

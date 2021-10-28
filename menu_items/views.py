@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import MenuItem
 
 # Create your views here.
@@ -13,3 +13,14 @@ def all_menu_items(request):
     }
 
     return render(request, 'menu_items/menu.html', context)
+
+def item_details(request, menu_item_id):
+    """ A view for item descriptions """
+
+    menu_item = get_object_or_404(MenuItem, pk=menu_item_id)
+
+    context = {
+        'menu_item': menu_item,
+    }
+
+    return render(request, 'menu_items/item_details.html', context)
