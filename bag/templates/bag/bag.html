@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -29,9 +30,9 @@
                                 <tr>
                                     <th scope="col">Item Info</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Price</th>
                                 </tr>
                             </thead>
 
@@ -44,7 +45,7 @@
                                         <p class="my-0"><strong>{{ item.menu_item.name }}</strong></p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.menu_item.price }}</p>
+                                        <p class="my-0">${{ item.menu_item.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
