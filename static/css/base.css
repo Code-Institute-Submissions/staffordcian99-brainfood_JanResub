@@ -114,7 +114,12 @@ body{
     color: white;
 }
 
-
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+    margin-top: 5px;
+}
 
 /* Media Queries */
 
