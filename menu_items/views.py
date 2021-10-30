@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import MenuItem, Category
+from .forms import MenuItemForm
 
 # Create your views here.
 
@@ -47,3 +48,52 @@ def item_detail(request, menu_item_id):
 
     return render(request, 'menu_items/item_detail.html', context)
 
+def add_menu_item(request):
+    """ Add a menu item to the store """
+    if request.method == 'POST':
+        form = MenuItemForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added menu item!')
+            return redirect(reverse('add_menu_item'))
+        else:
+            messages.error(request, 'Failed to add menu item. Please ensure the form is valid.')
+    else:
+        form = MenuItemForm()
+    template = 'menu_items/add_menu_item.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_menu_item(request, menu_item_id):
+    """ Edit a menu_item in the store """
+    menu_item = get_object_or_404(MenuItem, pk=menu_item_id)
+    if request.method == 'POST':
+        form = MenuItemForm(request.POST, request.FILES, instance=menu_item)
+        if form.is_valid():
+            menu_item = form.save()
+            messages.success(request, 'Successfully updated menu item!')
+            return redirect(reverse('item_detail', args=[menu_item.id]))
+        else:
+            messages.error(request, 'Failed to update menu item. Please ensure the form is valid.')
+    else:
+        form = menu_itemForm(instance=menu_item)
+        messages.info(request, f'You are editing {menu_item.name}')
+
+    template = 'menu_items/edit_menu_item.html'
+    context = {
+        'form': form,
+        'menu_item': menu_item,
+    }
+
+    return render(request, template, context)
+
+def delete_menu_item(request, menu_item_id):
+    """ Delete a menu_item from the store """
+    menu_item = get_object_or_404(MenuItem, pk=menu_item_id)
+    menu_item.delete()
+    messages.success(request, 'menu item deleted!')
+    return redirect(reverse('all_items'))
