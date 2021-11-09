@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['staffordcian99-brainfood-ta-app.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['brainfood-ta-app.herokuapp.com', 'localhost']
 
 
 # Application definition
