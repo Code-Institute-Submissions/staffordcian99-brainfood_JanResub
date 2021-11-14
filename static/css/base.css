@@ -248,6 +248,8 @@ btn-file {
     }
 
     .nav-list{
-        margin-left: 25%;
+        margin-left: 15%;
+        padding-top: 0;
+        margin-top: 2px;
     }
 }
