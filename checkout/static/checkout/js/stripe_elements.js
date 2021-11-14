@@ -68,7 +68,6 @@ form.addEventListener('submit', function(ev) {
                         line1: $.trim(form.street_address1.value),
                         line2: $.trim(form.street_address2.value),
                         city: $.trim(form.town_or_city.value),
-                        country: $.trim(form.country.value),
                         state: $.trim(form.county.value),
                     }
                 }
@@ -80,7 +79,6 @@ form.addEventListener('submit', function(ev) {
                     line1: $.trim(form.street_address1.value),
                     line2: $.trim(form.street_address2.value),
                     city: $.trim(form.town_or_city.value),
-                    country: $.trim(form.country.value),
                     postal_code: $.trim(form.postcode.value),
                     state: $.trim(form.county.value),
                 }
@@ -92,7 +90,7 @@ form.addEventListener('submit', function(ev) {
                     <span class="icon" role="alert">
                     <i class="fas fa-times"></i>
                     </span>
-                    <span>${result.error.message}</span>`;
+                    <span>error</span>`;
                 $(errorDiv).html(html);
                 $('#payment-form').fadeToggle(100);
                 $('#loading-overlay').fadeToggle(100);
