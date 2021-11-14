@@ -129,3 +129,4 @@ At the moment of submitting this Milestone project the Development Branch and Ma
 
 
 ## Code 
+All code in this project is my own except bootstrap classes.
