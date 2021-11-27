@@ -73,21 +73,25 @@ def add_menu_item(request):
 
 @login_required
 def edit_menu_item(request, menu_item_id):
-    """ Edit a menu_item in the store """
+    """ Edit a product in the store """
     if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
+
     menu_item = get_object_or_404(MenuItem, pk=menu_item_id)
     if request.method == 'POST':
         form = MenuItemForm(request.POST, request.FILES, instance=menu_item)
         if form.is_valid():
-            menu_item = form.save()
-            return redirect(reverse('item_detail', args=[menu_item.id]))
+            form.save()
+            messages.success(request, 'Successfully updated item!')
+            return redirect(reverse('menu_item_detail', args=[menu_item.id]))
         else:
-            messages.error(request, 'Failed to update menu item. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
     else:
         form = MenuItemForm(instance=menu_item)
+        messages.info(request, f'You are editing {menu_item.name}')
 
-    template = 'menu_items/edit_menu_item.html'
+    template = 'menu_items/edit_menu_items.html'
     context = {
         'form': form,
         'menu_item': menu_item,
