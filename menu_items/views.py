@@ -85,7 +85,7 @@ def edit_menu_item(request, menu_item_id):
         else:
             messages.error(request, 'Failed to update menu item. Please ensure the form is valid.')
     else:
-        form = menu_itemForm(instance=menu_item)
+        form = MenuItemForm(instance=menu_item)
 
     template = 'menu_items/edit_menu_item.html'
     context = {
