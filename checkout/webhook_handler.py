@@ -31,7 +31,7 @@ class StripeWH_Handler:
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
+        )
 
     def handle_event(self, event):
         """
@@ -126,12 +126,11 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for quantity in item_data.items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 MenuItem=MenuItem,
                                 quantity=quantity,
-                                MenuItem_size=size,
                             )
                             order_line_item.save()
             except Exception as e:
