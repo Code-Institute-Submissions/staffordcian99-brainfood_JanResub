@@ -6,71 +6,42 @@
             </a>
         </li>
 
+
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=burgers" id="burgers-link">
-                Burgers
+            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}" id="all_items-link">
+                Food
             </a>
+
+            <div class="dropdown-menu border-0" aria-labelledby="food-link">
+                <a href="{% url 'all_items' %}?category=burgers" class="dropdown-item">Burgers</a>
+                <a href="{% url 'all_items' %}?category=chicken" class="dropdown-item">Chicken</a>
+                <a href="{% url 'all_items' %}?category=chips" class="dropdown-item">Chips</a>
+                <a href="{% url 'all_items' %}?category=fish" class="dropdown-item">Fish</a>
+                <a href="{% url 'all_items' %}?category=pizza" class="dropdown-item">Pizza</a>
+                <a href="{% url 'all_items' %}?category=kebabs" class="dropdown-item">Kebabs</a>
+                <a href="{% url 'all_items' %}?category=subs" class="dropdown-item">Subs</a>
+            </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=chips" id="chips-link">
-                Chips
+            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}" id="all_items-link">
+                Others
             </a>
+
+            <div class="dropdown-menu border-0" aria-labelledby="others-link">
+                <a href="{% url 'all_items' %}?category=drinks" class="dropdown-item">Drinks</a>
+                <a href="{% url 'all_items' %}?category=sauces" class="dropdown-item">Sauces</a>
+                <a href="{% url 'all_items' %}?category=side_orders" class="dropdown-item">Side Orders</a>
+            </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=chicken" id="chicken-link">
-                Chicken
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=fish" id="fish-link">
-                Fish
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=pizza" id="pizza-link">
-                Pizza
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=kebabs" id="kebabs-link">
-                Kebabs
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=subs" id="subs-link">
-                Subs
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=sauces" id="sauces-link">
-                Sauces
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=drinks" id="drinks-link">
-                Drinks
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=side_orders" id="sides-link">
-                Side Orders
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-white" href="{% url 'all_items' %}?category=meal_deals" id="meal-deal-link">
+            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}?category=meal_deals" id="meal_deals-link">
                 Meal Deals
             </a>
         </li>
+
+
     </ul>
 </div>
         
