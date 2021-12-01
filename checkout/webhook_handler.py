@@ -117,22 +117,15 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(bag).items():
-                    MenuItem = MenuItem.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            MenuItem=MenuItem,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for quantity in item_data.items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                MenuItem=MenuItem,
-                                quantity=quantity,
-                            )
-                            order_line_item.save()
+                    menu_item = MenuItem.objects.get(id=item_id)
+                    isinstance(item_data, int):
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        menu_item=menu_item,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
+
             except Exception as e:
                 if order:
                     order.delete()
