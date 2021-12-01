@@ -8,7 +8,7 @@
 
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5 text-white" href="{% url 'all_items' %}" id="all_items-link">
+            <a class="font-weight-bold nav-link mr-5 text-white" data-toggle="dropdown" href="{% url 'all_items' %}" id="all_items-link">
                 Food
             </a>
 
@@ -28,7 +28,7 @@
                 Others
             </a>
 
-            <div class="dropdown-menu border-0" aria-labelledby="others-link">
+            <div class="dropdown-menu border-0" data-toggle="dropdown" aria-labelledby="others-link">
                 <a href="{% url 'all_items' %}?category=drinks" class="dropdown-item">Drinks</a>
                 <a href="{% url 'all_items' %}?category=sauces" class="dropdown-item">Sauces</a>
                 <a href="{% url 'all_items' %}?category=side_orders" class="dropdown-item">Side Orders</a>
