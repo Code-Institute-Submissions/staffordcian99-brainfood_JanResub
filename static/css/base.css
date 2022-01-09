@@ -255,6 +255,8 @@ btn-file {
 
     .home-container{
         padding-top: 0;
+        max-width: 45%;
+        margin-left: 25px;
     }
 
     .menu-button{
