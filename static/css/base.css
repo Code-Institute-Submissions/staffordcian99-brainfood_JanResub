@@ -63,7 +63,10 @@ body{
 .menu-button:focus,
 .add-bag-btn:hover,
 .add-bag-btn:active,
-.add-bag-btn:focus {
+.add-bag-btn:focus
+.btn-file:hover,
+.btn-file:active,
+.btn-file:focus {
     background: white;
     color: orangered;
     border: 2px solid orangered;
@@ -182,13 +185,17 @@ body{
     overflow-y: auto;
 }
 
-btn-file {
+.btn-file {
     position: relative;
     overflow: hidden;
+    background: orangered;
+    color: white;
 }
 
 .btn-file input[type="file"] {
     position: relative;
+    min-width: 100%;
+    min-height: 100%;
     opacity: 0;
     cursor: pointer;
 }
