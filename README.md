@@ -93,11 +93,12 @@ Beneath the payment section there are two buttons one for adjusting the bag befo
 * This Website was built using the HTML, CSS, Javascript and Python programming languages.
 *  [Gitpod](https://www.gitpod.io/) was the IDE used during the development of this project.
 * [Bootstrap Cdn](https://materializecss.com/) was used to simplify the structure of the website and to easily make the website responsive.
-[Font Awesome](https://fontawesome.com/) was used to provide icons.
+* [Font Awesome](https://fontawesome.com/) was used to provide icons.
 * [Google Fonts](https://fonts.google.com/) was used to style the website fonts.
 * [JQuery](https://jquery.com/) was used when creating the stripe elements.
 * [Stripe](https://stripe.com/) was used to provide payment functionality for customers.
 * [Django Framework](https://www.djangoproject.com/) was the framework used for thus project. Django-allauth also provided the templates and functionality for the creation and login/out functionality of the users accounts.
+* [Heroku](https://www.heroku.com) was used to host the deployed website.
 
 
 # Testing
@@ -130,3 +131,10 @@ At the moment of submitting this Milestone project the Development Branch and Ma
 
 ## Code 
 All code in this project is my own except bootstrap classes.
+
+## Problems
+This website was not created without it's problems, it took longer than expected to create functional stripe payments due to a problem with the form fields. The country field on the delivery address originally in the project was removed due to it being a local delivery service. Unfortunately I failed to remove the field in the JavaScript which caused the form to be invalid and the stripe payments to fail. 
+
+Along with this there was also a problem with the select image button on the managers add item page. The select image button was positioned absolutely which caused a window to open every time the user clicked anywhere on the page. This led to the user being unable to complete the form or use the navigation links on the page. This was fixed by changing the the buttons position to relative.
+
+On top of all of this I am aware that the project may still contain validation errors, due to time contraints all validation errors may not be resolved. If so I do certainly apologise.

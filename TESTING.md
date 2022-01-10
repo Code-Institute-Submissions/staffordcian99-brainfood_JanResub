@@ -3,12 +3,6 @@
 
 [View website on heroku](http://brainfood-ta-app.herokuapp.com/)
 
-## Testing
-* [W3C CSS Validation](http://www.w3.org/)
-* [W3C Markup Validation](https://validator.w3.org/)
-
-The W3C CSS Validation Service and W3C Markup Validation Service were used to check the validity of the website code.
-
 ## User stories testing:
 
 ### As a new user, I want to be able to easily navigate the site:
