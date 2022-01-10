@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from menu_items.models import MenuItem
 
+
 def bag_contents(request):
 
     bag_items = []

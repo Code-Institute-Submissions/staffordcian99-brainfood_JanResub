@@ -60,7 +60,8 @@ def add_menu_item(request):
             form.save()
             return redirect(reverse('add_menu_item'))
         else:
-            messages.error(request, 'Failed to add menu item. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add menu item. Please ensure the form is valid.')
     else:
         form = MenuItemForm()
     template = 'menu_items/add_menu_item.html'
@@ -86,7 +87,8 @@ def edit_menu_item(request, menu_item_id):
             messages.success(request, 'Successfully updated item!')
             return redirect(reverse('item_detail', args=[menu_item.id]))
         else:
-            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update item. Please ensure the form is valid.')
     else:
         form = MenuItemForm(instance=menu_item)
         messages.info(request, f'You are editing {menu_item.name}')

@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
+
+
 def view_bag(request):
     """ A view for the shopping bag page """
 
     return render(request, 'bag/bag.html')
+
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the menu items to the bag """
@@ -37,11 +40,12 @@ def adjust_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
+
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
 
     bag = request.session.get('bag', {})
-    
+
     try:
         bag.pop(item_id)
 
