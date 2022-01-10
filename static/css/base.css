@@ -191,9 +191,11 @@ body{
     background: orangered;
     color: white;
     margin-top: 10px;
-    padding: 20px;
-    max-height: 50px;
-    max-width: 25%;
+    padding: 15px;
+    max-height: 40px;
+    max-width: 33%;
+    margin-left: 33.5%;
+    margin-right: 33.5%;
 }
 
 .btn-file input[type="file"] {
