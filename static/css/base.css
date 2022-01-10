@@ -190,6 +190,8 @@ body{
     overflow: hidden;
     background: orangered;
     color: white;
+    margin-top: 10px;
+    padding: 20px;
 }
 
 .btn-file input[type="file"] {
