@@ -188,11 +188,7 @@ btn-file {
 }
 
 .btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
+    position: relative;
     opacity: 0;
     cursor: pointer;
 }
